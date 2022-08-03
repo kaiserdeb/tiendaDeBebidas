@@ -1,0 +1,13 @@
+.cart-widget {
+    cursor: pointer;
+    text-align: center;
+    width: 35px;
+    font-size: 15pt;
+  }
+  
+  .qty-display {
+    position: absolute !important;
+    font-size: 8pt;
+    top: -5px;
+    left: 20px;
+  }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NavItem = (props) => {
+export const NavItem = (props) => {
   const {titulo, url} = props
   return (
     <li className="nav-item d-flex">
@@ -8,5 +8,3 @@ const NavItem = (props) => {
     </li>
   )
 }
-
-export default NavItem
