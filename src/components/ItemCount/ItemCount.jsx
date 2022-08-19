@@ -14,7 +14,7 @@ export const ItemCount = (props) => {
             <button class="input-group-text btn btn-warning" onClick={() => addConter(1)} disabled={counter === stock} >+</button>
         </div>
         <div class="d-grid gap-2 col-12 mx-auto">
-            <button className="btn btn-warning" onClick={() => onAdd(counter)} disabled={stock === 0 ? true : null}> Agregar </button>
+            <button className="btn btn-warning" onClick={() => onAdd(counter)} disabled={stock === 0 || counter === 0}> Agregar </button>
         </div>
     </>
   )
