@@ -2,7 +2,6 @@ import React from 'react'
 
 export const ItemDetail = (props) => {
     const { title, price, stock, pictureUrl } = props;
-    console.log(props);
   return (
     <>
     <div className="container-fluid">
@@ -19,11 +18,9 @@ export const ItemDetail = (props) => {
             <div className="text-dark col text-start">Stock:</div>
             <div className="text-muted col text-end">{stock}</div>
           </div>
-
         </div>
       </div>
     </div>
-
     </>
   )
 }

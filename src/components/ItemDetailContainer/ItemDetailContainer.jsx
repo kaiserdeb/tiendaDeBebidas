@@ -1,26 +1,30 @@
 import React, { useEffect, useState } from 'react'
-import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
+import { ItemDetail, Spinner } from '../';
+import data from '../../data.json';
 
 export const ItemDetailContainer = (props) => {
-    const [item,setItem] = useState();
+  const { id } = useParams();
+  const [item,setItem] = useState();
 
-    useEffect(() => {
-        let product = {id: 1, title:'Cerveza Rubia', price:110, stock: 1, pictureUrl:'https://cdn.milenio.com/uploads/media/2021/12/21/por-esta-razon-la-cerveza.jpg'};
-        const productPromise = new Promise((resolve, reject)=>{
-            setTimeout(() => {
-              resolve(product)
-            }, 2000);
-        });  
-        productPromise.then(setItem)
-        .catch(console.log)
-        .finally();
-      }, [])
+  useEffect(() => {
+
+      const productPromise = new Promise((resolve, reject)=>{
+          setTimeout(() => {
+            let product = data.find(prod => prod.id == id );
+            resolve(product);
+          }, 2000);
+      });  
+      productPromise.then(setItem)
+      .catch(console.log)
+      .finally();
+    }, [id])
 
   return (
     <>
     <div className="p-4">
       <div className='row text-center'>
-        { item ? <ItemDetail {...item} /> : <p>Obteniendo item...</p> }
+        { item ? <ItemDetail {...item} /> : <Spinner/> }
       </div>
     </div>
   </>

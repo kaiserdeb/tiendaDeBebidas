@@ -1,12 +1,11 @@
-import { Item } from '../Item/Item';
+import { Item } from '../'
 
 export const ItemList = (props) => {
-  const { items } = props;   
+  const { items } = props;
   return (
     <>
-      { 
-      items.map((item, index)=> <Item key={index} {...item} />) 
-      }
+      { items && items.map((item, index)=> <Item key={index} {...item} />) }
+      { items.length < 1 && <p>No hay resultados</p> }
     </>
   )
 }

@@ -1,8 +1,9 @@
 import { NavBar, 
   //ItemCount,
-  //ItemListContainer, 
+  ItemListContainer, 
   ItemDetailContainer } from './components';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   // const onAdd = (qty) => {
@@ -11,16 +12,14 @@ function App() {
   return (
     <>
     <div className="page d-flex flex-column justify-content-between">
+      <BrowserRouter>
       <NavBar/>
-      <div className='container mt-4 px-lg-5'>
-        <div className="row justify-content-md-center">
-          <div className="col-lg-10 col-md-12">
-            {/* <ItemListContainer titulo='¡BIENVENIDOS A NUESTRA TIENDA ONLINE!'/> */}
-            {/* <ItemCount stock={5} initial={0} onAdd={onAdd}/> */}
-            <ItemDetailContainer/>
-          </div>
-        </div>
-      </div>
+      <Routes>
+        <Route path='/' element={ <ItemListContainer titulo='¡BIENVENIDOS A NUESTRA TIENDA ONLINE!'/> }/>
+        <Route path='/item/:id' element={ <ItemDetailContainer /> }/>
+        <Route path='/category/:category' element={ <ItemListContainer titulo='¡BIENVENIDOS A NUESTRA TIENDA ONLINE!'/> }/>
+      </Routes>
+      </BrowserRouter>
     </div>
     </>
   );

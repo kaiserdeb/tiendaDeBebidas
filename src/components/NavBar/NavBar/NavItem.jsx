@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const NavItem = (props) => {
   const {titulo, url} = props
   return (
     <li className="nav-item d-flex">
-      <a className="nav-link" href={url}>{titulo}</a>
+      <Link className="nav-link" to={url}>{titulo}</Link>
     </li>
   )
 }

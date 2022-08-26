@@ -1,0 +1,15 @@
+[
+    {"id": 1, "title":"Cerveza Rubia", "price":110, "category": "Cerveza","stock": 10, "pictureUrl":"https://cdn.milenio.com/uploads/media/2021/12/21/por-esta-razon-la-cerveza.jpg"},
+    {"id": 2, "title":"Cerveza Scotch", "price":120, "category": "Cerveza","stock": 21, "pictureUrl":"https://cdn.milenio.com/uploads/media/2021/12/21/por-esta-razon-la-cerveza.jpg"},
+    {"id": 3, "title":"Cerveza Stout", "price":130, "category": "Cerveza","stock": 32, "pictureUrl":"https://cdn.milenio.com/uploads/media/2021/12/21/por-esta-razon-la-cerveza.jpg"},
+    {"id": 4, "title":"Cerveza IPA", "price":140, "category": "Cerveza","stock": 43, "pictureUrl":"https://cdn.milenio.com/uploads/media/2021/12/21/por-esta-razon-la-cerveza.jpg"},
+    {"id": 5, "title":"Merlot", "price":650, "category": "Vino","stock": 54, "pictureUrl":"https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568"},
+    {"id": 6, "title":"Pinot Noir", "price":655, "category": "Vino","stock": 65, "pictureUrl":"https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568"},
+    {"id": 7, "title":"Syrah", "price":755, "category": "Vino","stock": 76, "pictureUrl":"https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568"},
+    {"id": 8, "title":"Torrontés", "price":765, "category": "Vino","stock": 87, "pictureUrl":"https://images.hola.com/imagenes/cocina/escuela/200907079224/temperatura/vinos/enologia/0-876-296/temperatura-adobe-t.jpg?tx=w_568"},
+    {"id": 9, "title":"Single Malt", "price":15000, "category": "Whisky","stock": 98, "pictureUrl":"https://i.blogs.es/a80d47/foto-apertura/1366_2000.jpg"},
+    {"id": 10, "title":"Blended Scotch", "price":14000, "category": "Whisky","stock": 109, "pictureUrl":"https://i.blogs.es/a80d47/foto-apertura/1366_2000.jpg"},
+    {"id": 11, "title":"Tequila", "price":1200, "category": "Espirituosa","stock": 120, "pictureUrl":"https://media.istockphoto.com/photos/liquor-bottles-on-a-white-background-picture-id459018635?s=612x612"},
+    {"id": 12, "title":"Ron", "price":1400, "category": "Espirituosa","stock": 131, "pictureUrl":"https://media.istockphoto.com/photos/liquor-bottles-on-a-white-background-picture-id459018635?s=612x612"},
+    {"id": 13, "title":"Ginebra", "price":1100, "category": "Espirituosa","stock": 132, "pictureUrl":"https://media.istockphoto.com/photos/liquor-bottles-on-a-white-background-picture-id459018635?s=612x612"}
+]
