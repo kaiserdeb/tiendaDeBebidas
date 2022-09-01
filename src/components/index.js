@@ -6,3 +6,4 @@ export * from './ItemDetailContainer/ItemDetailContainer';
 export * from './ItemDetail/ItemDetail';
 export * from './Item/Item';
 export * from './Spinner/Spinner';
+export * from './Cart/Cart';

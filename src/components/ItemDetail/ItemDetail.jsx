@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {ItemCount} from '../'
+import { Link } from "react-router-dom";
 
 export const ItemDetail = (props) => {
     const { title, price, stock, pictureUrl } = props;
+    const [counter,setCounter] = useState(0);
+
+    const onAdd = (qty) => {
+      setCounter(qty);
+    };
+  
+
   return (
     <>
     <div className="container-fluid">
@@ -17,6 +26,10 @@ export const ItemDetail = (props) => {
             <div className="text-muted col text-end mb-3">${price}</div>
             <div className="text-dark col text-start">Stock:</div>
             <div className="text-muted col text-end">{stock}</div>
+            { counter > 0 ? 
+              <Link className="btn btn-warning w-100 my-3" to="/cart">Ir al carrito</Link> : 
+              <ItemCount stock={stock} initial={0} onAdd={onAdd}/> 
+            }
           </div>
         </div>
       </div>
