@@ -22,11 +22,13 @@ export const ItemDetailContainer = (props) => {
 
   return (
     <>
-    <div className="p-4">
-      <div className='row text-center'>
-        { item ? <ItemDetail {...item} /> : <Spinner/> }
+      <div className='container mt-4 px-lg-5'>
+        <div className="row justify-content-md-center">
+          <div className="col-lg-10 col-md-12">
+            { item ? <ItemDetail {...item} /> : <Spinner/> }
+          </div>
+        </div>
       </div>
-    </div>
-  </>
+    </>
   )
 }
