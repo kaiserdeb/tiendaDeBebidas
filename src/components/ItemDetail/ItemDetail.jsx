@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import {ItemCount} from '../'
 import { Link } from "react-router-dom";
+import { CartContext } from '../../contexts/CartProvider';
 
-export const ItemDetail = (props) => {
-    const { title, price, stock, pictureUrl } = props;
+export const ItemDetail = ({ item }) => {
+    const { title, price, stock, pictureUrl } = item;
     const [counter,setCounter] = useState(0);
-
+    const { addItem } = useContext(CartContext);
     const onAdd = (qty) => {
       setCounter(qty);
+      addItem(item,qty)
     };
   
 
