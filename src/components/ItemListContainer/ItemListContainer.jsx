@@ -31,9 +31,7 @@ export const ItemListContainer = (props) => {
           <div className="col-lg-10 col-md-12">
             <div className="p-4">
               <h2 className="h5 text-center mb-5">{titulo}</h2>
-              <div className='row text-center'>
               { items ? <ItemList items={items}/> : <Spinner/> }
-              </div>
             </div>
           </div>
         </div>

@@ -9,9 +9,9 @@ export const ItemCount = (props) => {
   return (
     <>
         <div className="input-group mb-3">
-            <button className="input-group-text btn btn-warning" onClick={() => addConter(-1)} disabled={counter === 0}>-</button>
+            <button className="input-group-text btn btn-warning px-2" onClick={() => addConter(-1)} disabled={counter === 0}><i className="bi bi-dash"></i></button>
             <span className="form-control text-center">{counter}</span>
-            <button className="input-group-text btn btn-warning" onClick={() => addConter(1)} disabled={counter === stock} >+</button>
+            <button className="input-group-text btn btn-warning px-2" onClick={() => addConter(1)} disabled={counter === stock} ><i className="bi bi-plus"></i></button>
         </div>
         <div className="d-grid gap-2 col-12 mx-auto">
             <button className="btn btn-warning" onClick={() => onAdd(counter)} disabled={stock === 0 || counter === 0}> Agregar </button>

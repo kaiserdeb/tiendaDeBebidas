@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { NavItem, CartWidget } from '..'
 import logo from '../../../cheers.png'
+import { CartContext } from '../../../contexts/CartProvider';
 
 export const NavBar = () => {
+  const { carrito } = useContext(CartContext);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -23,7 +25,7 @@ export const NavBar = () => {
             <NavItem titulo='Whisky' url='/category/Whisky' />
           </ul>
           <div className="d-flex align-items-center">
-            <CartWidget cantidad='5' />
+            <CartWidget cantidad={carrito.reduce((c,e)=> c += e.qty, 0 )} />
           </div>
         </div>
       </div>
