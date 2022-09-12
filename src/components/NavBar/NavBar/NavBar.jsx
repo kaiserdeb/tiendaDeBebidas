@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { NavItem, CartWidget } from '..'
-import logo from '../../../cheers.png'
+import logo from '../../../assets/img/cheers.png'
 import { CartContext } from '../../../contexts/CartProvider';
 
 export const NavBar = () => {
@@ -25,7 +25,8 @@ export const NavBar = () => {
             <NavItem titulo='Whisky' url='/category/Whisky' />
           </ul>
           <div className="d-flex align-items-center">
-            <CartWidget cantidad={carrito.reduce((c,e)=> c += e.qty, 0 )} />
+            {/* <CartWidget cantidad={carrito.reduce((c,e)=> c += e.qty, 0 )} /> */}
+            <CartWidget cantidad={carrito.length} />
           </div>
         </div>
       </div>

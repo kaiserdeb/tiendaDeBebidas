@@ -29,7 +29,12 @@ export const ItemDetail = ({ item }) => {
             <div className="text-dark col text-start">Stock:</div>
             <div className="text-muted col text-end">{stock}</div>
             { counter > 0 || isInCart(id)? 
-              <Link className="btn btn-warning w-100 my-3" to="/cart">Ir al carrito</Link> : 
+              (
+              <>
+                <Link className="btn btn-warning w-100 my-3" to="/cart">Ir al carrito</Link>
+                <Link className="btn btn-warning w-100 my-3" to="/">Seguir Comprando</Link>
+              </>
+              ) : 
               <ItemCount stock={stock} initial={0} onAdd={onAdd}/> 
             }
           </div>
